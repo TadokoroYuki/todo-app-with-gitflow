@@ -2,8 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todo from './components/Todo'
 
 function App() {
+
+
+  const [count, setCount] = useState(0)
+
 	const [title, setTitle] = useState<string>("");
 	const API_URL = "http://localhost:8000";
 	const addTodo = async (e: React.FormEvent) => {
@@ -24,6 +29,7 @@ function App() {
 			setTitle(""); // Reset input after adding
 		}
 	};
+
 
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-32 py-4 px-4">
@@ -55,9 +61,9 @@ function App() {
         </div>
       </form>
       <ul className="divide-y divide-gray-200 px-4">
-        {/* {data?.map((todo) => (
-          <Todo key={todo.id} todo={todo} />
-        ))} */}
+        <Todo key={1} />
+		<Todo key={2} />
+		<Todo key={3} />
       </ul>
     </div>
   )
