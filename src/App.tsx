@@ -5,6 +5,7 @@ import './App.css'
 import Todo from './components/Todo'
 
 function App() {
+	const API_URL = "http://localhost:8080"
   const [count, setCount] = useState(0)
 
   return (
